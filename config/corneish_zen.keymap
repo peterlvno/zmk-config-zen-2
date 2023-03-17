@@ -72,12 +72,12 @@
 // |    TAB   |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |  \   |
 // |    ESC   |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
 // | L_NUMPAD |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  =   |
-//                 | GUI | SHFT| SPC/NUMBER |   | ENT/SYMBOL | SHFT/BSPC | BKSP|
+//                 | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
         bindings = <
-   &kp TAB      &kp Q       &kp W &kp F &kp P &kp B     &kp J &kp L &kp U     &kp Y   &kp SEMI       &kp BSLH
-   &kp ESC      &kp A       &kp R &kp S &kp T &kp G     &kp M &kp N &kp E     &kp I   &kp O          &kp SQT
-   &mo L_NUMPAD &mt LCTRL Z &kp X &kp C &kp D &kp V     &kp K &kp H &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
-                &td0 &kp LSHIFT &lt L_SYMBOL  SPACE     &lt L_NUMBER RET &mt RSHIFT BSPC &kp RALT
+  &kp TAB      &kp Q       &kp W &kp F &kp P &kp B     &kp J &kp L &kp U     &kp Y   &kp SEMI       &kp BSLH
+  &kp ESC      &kp A       &kp R &kp S &kp T &kp G     &kp M &kp N &kp E     &kp I   &kp O          &kp SQT
+  &mo L_NUMPAD &mt LCTRL Z &kp X &kp C &kp D &kp V     &kp K &kp H &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
+                &td0 &kp LSHIFT &lt L_SYMBOL SPACE     &lt L_NUMBER RET &mt RSHIFT BSPC &kp RALT
       >;
     };
 
@@ -87,26 +87,26 @@
 // |    TAB   |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |  \   |
 // |    ESC   |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
 // | L_NUMPAD |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  =   |
-//                 | GUI | SHFT| SPC/NUMBER |   | ENT/SYMBOL | SHFT/BSPC | BKSP|
+//                 | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
         bindings = <
-   &kp TAB      &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-   &kp ESC      &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &mo L_NUMPAD &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
-          &td0 &kp LSHIFT &lt L_SYMBOL  SPACE    &lt L_NUMBER RET &mt RSHIFT BSPC &kp RALT
+  &kp TAB      &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+  &kp ESC      &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+  &mo L_NUMPAD &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+          &td0 &kp LSHIFT &lt L_SYMBOL SPACE    &lt L_NUMBER RET &mt RSHIFT BSPC &kp RALT
       >;
     };
 
     number_layer {
       label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  -   |
-// |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  _   |
-// | XXXX |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  `   |  1   |  2   |  3  |  4  |  5  |   |  6  |  7   |  8   |  9   |  0   |  -   |
+// |  ~   |  !   |  @   |  #  |  $  |  %  |   |  ^  |  &   |  *   |  (   |  )   |  _   |
+// | VOL+ | BRI- | BRI+ | F12 |     |     |   |     | Mute | Play | Prev | Next | VOl+ |
+//               | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
       bindings = <
-  &kp GRAVE     &kp N1          &kp N2        &kp N3   &kp N4       &kp N5         &kp N6           &kp N7          &kp N8     &kp N9     &kp N0   &kp MINUS
-  &kp TILDE     &kp EXCLAMATION &kp AT_SIGN   &kp HASH &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPS        &kp STAR   &kp LPAR   &kp RPAR &kp UNDERSCORE
-  &kp C_VOL_DN  &kp C_BRI_DEC   &kp C_BRI_INC &kp F12  &trans &trans &trans        &kp K_MUTE       &kp K_PP        &kp K_PREV &kp K_NEXT &kp C_VOL_UP
+  &kp GRAVE     &kp N1          &kp N2        &kp N3   &kp N4       &kp N5         &kp N6           &kp N7          &kp N8     &kp N9     &kp N0    &kp MINUS
+  &kp TILDE     &kp EXCLAMATION &kp AT_SIGN   &kp HASH &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPS        &kp STAR   &kp LPAR   &kp RPAR  &kp UNDERSCORE
+  &kp C_VOL_DN  &kp C_BRI_DEC   &kp C_BRI_INC &kp F12  &trans       &trans         &trans           &kp K_MUTE      &kp K_PP   &kp K_PREV &kp K_NEXT &kp C_VOL_UP
                                           &td0 &kp LSHIFT &lt L_SYMBOL SPACE       &lt L_NUMBER RET &mt RSHIFT BSPC &kp RALT
       >;
     };
@@ -117,7 +117,7 @@
 // | F1 | F2 | F3 | { | } |      |   | pg_up |  home  |   up   |   end   |          |     |
 // | F4 | F5 | F6 | ( | ) |  "|" |   | pg_dn |  left  |  down  |  right  |  K_LOCK  |     |
 // | F7 | F8 | F9 | [ | ] |      |   |       |        |        |         |          |     |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+//      | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
       bindings = <
   &kp F1 &kp F2 &kp F3 &kp LBRC &kp RBRC &trans      &kp PG_UP &kp HOME  &kp UP   &kp END &trans &trans
   &kp F4 &kp F5 &kp F6 &kp LPAR &kp RPAR &kp PIPE    &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &k_lock &trans
@@ -131,8 +131,8 @@
 // -----------------------------------------------------------------------------------------
 // |   TAB    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  7   |  8  |  9  |  +  | BKSP |
 // |   ESC    |  A  |  S  |  D  |  F  |  G  |   |  H  |  4   |  5  |  6  |  -  |  '   |
-// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  |   |  0  |  1  |  2   |  3  |  /  |  =   |
-//                        | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  |   |  0  |  1   |  2  |  3  |  /  |  =   |
+//                 | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
       bindings = <
   &trans &trans &trans &trans &trans &trans   &trans &kp N7  &kp N8  &kp N9   &kp PLUS  &trans
   &trans &trans &trans &trans &trans &trans   &trans &kp N4  &kp N5  &kp N6   &kp MINUS &trans
@@ -145,10 +145,10 @@
     adjust_layer {
       label = "ADJUST";
 // -----------------------------------------------------------------------------------------
-// | TAB   | XXX | XXX | XXX  |  XXX  |  XXX   |   |  XXX  | XXX | XXX | XXX | COLEMAK | QWERTY |
+// |  XXX  | XXX | XXX | XXX  |  XXX  |  XXX   |   |  XXX  | XXX | XXX | XXX | COLEMAK | QWERTY |
 // | BTCLR | BT1 | BT2 | BT3  |  BT4  |  BT5   |   |  XXX  | XXX | XXX | XXX | XXX     |  XXX   |
-// | SHFT  | XXX | XXX | XXX  |  XXX  |  XXX   |   |  XXX  | XXX | XXX | XXX | XXX     |  XXX   |
-//                           | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  XXX  | XXX | XXX | XXX  |  XXX  |  XXX   |   |  XXX  | XXX | XXX | XXX | XXX     |  XXX   |
+//                    | GUI | SHFT| SPC/SYMBOL |   | ENT/NUMBER | BSPC/SHFT | ALT |
       bindings = <
   &none       &none        &none        &none        &none        &none           &none        &none &none &none &to L_DEFAULT &to L_QWERTY
   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &bt BT_SEL 5 &none &none &none &none &none
@@ -168,34 +168,39 @@ layout:
 layers:
   COLEMAK:
     - ["Tab", "Q", "W", "F", "P", "B", "J", "L", "U", "Y", ";", "\\"]
-    - ["ESC", "A", "R", "S", "T", "G", "M", "N", "E", "I", "O", "'"]
-    - ["L_NUMPAD", "Z", "X", "C", "D", "V", "K", "H", ",", ".", "/", "="]
-    - ["LGui", "SHFT", "SPC/SYM ", "ENT/\nNUM", "SHFT/\nBSPC", "Bspace"]
+    - ["Esc", "A", "R", "S", "T", "G", "M", "N", "E", "I", "O", "'"]
+    - ["L_NUMPAD", {h: "Ctrl", t: "Z"}, "X", "C", "D", "V", "K", "H", ",", ".", {h: Ctrl, t: "/"}, "="]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
+
   QWERTY:
     - ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "\\"]
     - ["ESC", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'" ]
     - ["L_NUMPAD", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "="]
-    - ["LGui", "LWR", "SPC", "ENT", "RSE", "ALT"]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
+
   NUMBER:
     - ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-"]
     - ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_"]
-    - [null, null, null, null, null, null, null, null, null, null, null, null]
-    - ["LGui", null, "SPC", "ENT", null,  "ALT"]
+    - ["Vol-", "Bri+", "Bri+", "F12", null, null, null, "Mute", "Play/Pause", "Prev", "Next", "Vol+"]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
+
   SYMBOL:
-    - ["F1", "F2", "F3", "{", "}", null, "pg_up", "home", "up", "end", null, null]
-    - ["F2", "F5", "F6", "(", ")", "|", "pg_dn", "left", "down", "right", "K_LOCK", null]
+    - ["F1", "F2", "F3", "{", "}", null, "PgUp", "Home", "↑", "End", null, null]
+    - ["F4", "F5", "F6", "(", ")", "|", "PgDn", "←", "↓", "→", "LOCK", null]
     - ["F7", "F8", "F9", "[", "]", null, null, null, null, null, null, null]
-    - ["LGui", null, "SPC", "ENT", null, "ALT"]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
+
   NUMPAD:
     - ["Tab", "Q", "W", "E", "R", "T", "Y", "7", "8", "9", "+", "Bspace"]
     - ["ESC", "A", "S", "D", "F", "G", "H", "4", "5", "6", "-", "'"]
     - ["L_NUMPAD", "Z", "X", "C", "V", "B", "0", "1", "2", "3", "/", "="]
-    - ["LGui", "LWR", "SPC", "ENT", "RSE", "ALT"]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
+
   ADJUST:
-    - ["Tab", null, null, null, null, null, null, null, null, null, "COLEMAK", "QWERTY"]
+    - [null, null, null, null, null, null, null, null, null, null, "COLEMAK", "QWERTY"]
     - ["BT CLR", "BT 1", "BT 2", "BT 3", "BT 4", "BT 5", null, null, null, null, null, null]
-    - ["SHFT", null, null, null, null, null, null, null, null, null, null, null]
-    - ["LGui", "LWR", "SPC", "ENT", "RSE", "ALT"]
+    - [null, null, null, null, null, null, null, null, null, null, null, null]
+    - ["Gui", "Shift", {h: "L_SYMBOL", t: "Space"}, {h: "L_NUMBER", t: "Enter"}, {h: "Shift", t: "Bspace"}, "Alt"]
 
 for:
 https://caksoylar-keymap-drawer-streamlitapp-2a0rau.streamlit.app
