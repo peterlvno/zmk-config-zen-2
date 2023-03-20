@@ -88,7 +88,7 @@
         bindings = <
   &kp TAB    &kp Q  &kp W &kp F &kp P &kp B   &kp J &kp L &kp U     &kp Y   &kp SEMI       &kp SQT
   &kp LCTRL  &kp A  &kp R &kp S &kp T &kp G   &kp M &kp N &kp E     &kp I   &kp O          &kp BSLH
-  &mo LSHIFT &kp Z  &kp X &kp C &kp D &kp V   &kp K &kp H &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
+  &kp LSHIFT &kp Z  &kp X &kp C &kp D &kp V   &kp K &kp H &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
           &kp LALT &td0 &lt L_NUMBER SPACE    &lt L_FUNCTION RET &mt RSHIFT BSPC &gresc
       >;
     };
@@ -103,7 +103,7 @@
         bindings = <
   &kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
   &kp LCTRL  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-  &mo LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+  &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
           &kp LALT &td0 &lt L_NUMBER SPACE    &lt L_FUNCTION RET &mt RSHIFT BSPC &gresc
       >;
     };
